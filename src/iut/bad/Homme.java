@@ -1,43 +1,14 @@
 package iut.bad;
 
-public class Homme {
-    private String nom;
-    private String prenom;
-    private int age;
+public class Homme extends Humain {
 
     // Constructeur par défaut
     public Homme() {
+        super();
     }
 
     // Constructeur avec paramètres
     public Homme(String nom, String prenom, int age) {
-        this.nom = nom;
-        this.prenom = prenom;
-        this.age = age;
-    }
-
-    // Getters et setters (facultatifs si tu veux y accéder/modifier plus tard)
-    public String getNom() {
-        return nom;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
-    public String getPrenom() {
-        return prenom;
-    }
-
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
+        super(nom, prenom, age); // utilise le constructeur de Humain
     }
 }

@@ -6,9 +6,11 @@ public class Humain {
     protected String prenom;
     protected int age;
 
+    // Constructeur par défaut
     public Humain() {
     }
 
+    // Constructeur avec paramètres
     public Humain(String nom, String prenom, int age) {
         this.nom = nom;
         this.prenom = prenom;
@@ -16,23 +18,44 @@ public class Humain {
     }
 
     // Getters et setters
-    public String getNom() { return nom; }
-    public void setNom(String nom) { this.nom = nom; }
+    public String getNom() {
+        return nom;
+    }
 
-    public String getPrenom() { return prenom; }
-    public void setPrenom(String prenom) { this.prenom = prenom; }
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
 
-    public int getAge() { return age; }
-    public void setAge(int age) { this.age = age; }
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
 
     // Méthode pour afficher les détails
     public void details() {
         System.out.println(toString());
     }
 
-    // Refactoring : méthode toString() pour retourner les infos
-    @Override
-    public String toString() {
-        return "Nom : " + nom + ", Prénom : " + prenom + ", Âge : " + age;
+	public String toString() {
+		return "Nom : " + nom + ", Prénom : " + prenom + ", Âge : " + age;
+	}
+    public void manger() {
+        System.out.println(nom + " est en train de manger.");
     }
+
+    public void boire() {
+        System.out.println(nom + " est en train de boire.");
+    }
+
 }

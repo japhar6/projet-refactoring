@@ -1,4 +1,6 @@
 package iut.bad;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Humain implements Consommation {
 
@@ -6,6 +8,8 @@ public class Humain implements Consommation {
     protected String prenom;
     protected int age;
 
+    private List<Humain> amis = new ArrayList<>();
+    
     // Constructeur par défaut
     public Humain() {
     }
@@ -17,6 +21,7 @@ public class Humain implements Consommation {
         this.age = age;
     }
 
+    
     // Getters et setters
     public String getNom() {
         return nom;
